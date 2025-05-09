@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+  }
+
+  .footer-container {
+    bottom: 0;
+    padding: 24px;
+    background-color: rgba(3, 49, 110, 0.98);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 18px;
+    font-size: 16px;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 32px;
+  }
+  
+  .d_none {
+    display: none !important;
+  }

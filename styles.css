@@ -1,0 +1,24 @@
+.header-container {
+    background-color: rgba(3, 49, 110, 0.98);
+    display: flex;
+    justify-content: flex-start;
+    padding: 8px;
+    height: 50px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+  }
+
+  .main-content {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    background-color: hsl(199, 74%, 7%);
+  }
+
+  .pokemon-cards-img {
+    width: 100%;
+    object-fit: cover;
+  }
