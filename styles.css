@@ -39,9 +39,9 @@ header {
     width: 100%;
     min-height: calc(100vh - 100px);
     background-color: hsl(197, 60%, 18%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
-  .pokemon-cards-img {
-    width: 100%;
-    object-fit: cover;
-  }

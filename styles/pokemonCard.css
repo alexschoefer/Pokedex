@@ -1,0 +1,37 @@
+.pokemon-card {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid black;
+    margin: 10px 20px 10px 20px;
+    border-radius: 24px;
+}
+
+.pokemon-information h1 {
+    font-size: 24px;
+}
+
+.pokemon-information span {
+    font-size: 24px;;
+}
+
+.pokemon-information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 10px;
+}
+
+.pokemon-img-container {
+    display: flex;
+    margin-right: 10px;
+}
+
+.pokemon-img {
+    height: 40%;
+    padding: 10px;
+    cursor: pointer;
+}
