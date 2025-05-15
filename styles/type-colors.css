@@ -27,7 +27,7 @@
 }
 
 .ice {
-    background-color: rgb(22, 120, 232);
+    background-color: rgb(12, 86, 171);
 }
 
 .normal {
@@ -43,6 +43,34 @@
 }
 
 .ghost {
-    background-color: rgb(22, 120, 232);
+    background-color: rgb(139, 179, 225);
+}
+
+.ground {
+    background-color: rgb(78, 75, 62);
+}
+
+.fighting {
+    background-color: rgb(190, 102, 55);
+}
+
+.fairy {
+    background-color: rgb(55, 190, 163);
+}
+
+.rock {
+    background-color: rgb(59, 57, 56);
+}
+
+.dark {
+    background-color: rgb(20, 19, 19);
+}
+
+.psychic {
+    background-color: rgb(250, 133, 129);
+}
+
+.dragon {
+    background-color: rgb(217, 25, 19);
 }
 

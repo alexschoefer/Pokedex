@@ -1,68 +1,168 @@
 .pokemon-card {
-    max-width: 250px;
-    align-items: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    border-radius: 24px;
-    background-color: rgb(35, 79, 135);
+  max-width: 250px;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  background-color: rgb(35, 79, 135);
 }
 
 .pokemon-information h1 {
-    font-size: 24px;
-    text-align: center;
-    color: white;
+  font-size: 24px;
+  text-align: center;
+  color: white;
 }
 
 .pokemon-information span {
-    font-size: 24px;
-    text-align: center;
-    color: white;
+  font-size: 24px;
+  text-align: center;
+  color: white;
 }
 
 .pokemon-information {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .pokemon-img-container {
-    display: flex;
-    justify-content: center;
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 
 .pokemon-img {
-    height: 55%;
-    width: 100%;
-    padding: 5px;
-    margin-top: 8px;
-    cursor: pointer;
-    object-fit: contain;
+  height: 55%;
+  width: 100%;
+  padding: 5px;
+  margin-top: 8px;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .pokemon-type {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
 }
 
 .pokemon-type img {
+  display: flex;
+  justify-content: center;
+  max-height: 70px;
+  max-width: 70px;
+  padding: 5px;
+  gap: 8px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+}
+
+.pokemon-overlay {
+  display: flex;
+  justify-content: center;
+}
+
+.pokemon-card-overlay {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  background-color: rgb(35, 79, 135);
+  color: white;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.pokemon-img-overlay {
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+
+.pokemon-card-overlay h1,
+.pokemon-card-overlay span {
+  font-size: 36px;
+}
+
+.pokemon-img-overlay img {
+  display: flex;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+  height: 40%;
+  width: 50%;
+}
+
+.pokemon-properties {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 2px solid black;
+}
+
+.pokemon-main-facts {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.pokemon-main-facts h2 {
+  text-decoration: underline;
+}
+
+.pokemon-main-facts span {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.pokemon-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  gap: 90px;
+  font-size: 24px;
+  border-top: 2px solid black;
+}
+
+.pokemon-details h2 {
+    cursor: pointer;
+}
+
+td {
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+}
+
+.base_stats_container {
     display: flex;
-    justify-content: center;
-    max-height: 70px;
-    max-width: 70px;
-    padding: 5px;
-    gap: 8px;
-    margin-bottom: 8px;
-    border-radius: 20px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    padding-top: 10px;
 }
