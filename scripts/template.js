@@ -56,43 +56,65 @@
                         </div>
                         <div class="pokemon-details">
                             <div>
-                                <h2 id="stats">stats</h2>
+                                <h2 onclick="switchFromEvoChainToStats(${index})" id="stats" class="${pokemonData[index].types[0].type.name}-underline">stats</h2>
                             </div>
-                                                    <div>
-                                <h2>evo chain</h2>
+                            <div>
+                                <h2 onclick="switchFromStatsToEvoChain(${index})" id="evo-chain">evo chain</h2>
                             </div>
-                        </div>
-                        <div class="base_stats_container">
-                            <table>
-                                    <tr>
-                                        <td>hp</td>
-                                        <td>${pokemonData[index].stats[0].base_stat}
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>attack</td>
-                                        <td>${pokemonData[index].stats[1].base_stat}</td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>defense</td>
-                                        <td>${pokemonData[index].stats[2].base_stat}</td>
-                                    </tr>
-                                                                        <tr>
-                                        <td>special-attack</td>
-                                        <td>${pokemonData[index].stats[3].base_stat}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>special-defense</td>
-                                        <td>${pokemonData[index].stats[4].base_stat}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>speed</td>
-                                        <td>${pokemonData[index].stats[5].base_stat}</td>
-                                    </tr>
-                            </table>
                         </div>
                     </div>
-                </div>
+
+                       <div class="pokemon-stats-container" id="pokemon-stats-container">
+                            <div class="pokemon-stats">
+                                <div class="stat-name">hp</div>
+                                <div class="stat-value">${pokemonData[index].stats[0].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[0].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <div class="stat-name">attack</div>
+                                <div class="stat-value">${pokemonData[index].stats[1].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[1].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <div class="stat-name">defense</div>
+                                <div class="stat-value">${pokemonData[index].stats[2].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[2].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <div class="stat-name">special-attack</div>
+                                <div class="stat-value">${pokemonData[index].stats[3].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[3].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <div class="stat-name">special-defense</div>
+                                <div class="stat-value">${pokemonData[index].stats[4].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[4].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+
+                            <div class="pokemon-stats">
+                                <div class="stat-name">speed</div>
+                                <div class="stat-value">${pokemonData[index].stats[5].base_stat}</div>
+                                <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar ${pokemonData[index].types[0].type.name}" style="width: ${(pokemonData[index].stats[5].base_stat / 250) * 100}%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             </div>
         `
     }
+

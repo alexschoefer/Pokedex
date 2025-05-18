@@ -1,25 +1,56 @@
 .grass {
-    background-color: green;
+    background-color: rgb(23, 129, 23);
+}
+
+.grass-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(23, 129, 23);
 }
 
 .poison {
     background-color: rgb(187, 102, 223);
 }
 
+.posion-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(187, 102, 223);
+}
+
+
 .fire {
     background-color: rgb(234, 80, 20);
+}
+
+.fire-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(234, 80, 20);
 }
 
 .water {
     background-color: rgb(39, 123, 226);
 }
 
+.water-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(39, 123, 226);
+}
+
 .bug {
     background-color: rgb(85, 198, 113);
 }
 
+.bug-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(85, 198, 113);
+}
+
 .electric {
-    background-color: rgb(216, 219, 51);
+    background-color: rgb(197, 199, 41);
+}
+
+.electric-underline {
+    text-decoration: underline;
+    text-decoration-color: rgb(197, 199, 41);
 }
 
 .flying {
@@ -36,10 +67,6 @@
 
 .steel {
     background-color: rgb(175, 188, 202);
-}
-
-.water {
-    background-color: rgb(9, 114, 234);
 }
 
 .ghost {
