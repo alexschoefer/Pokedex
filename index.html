@@ -19,12 +19,12 @@
     <link rel="stylesheet" href="/styles/standard.css">
     <link rel="stylesheet" href="./styles/pokemonCard.css">
     <link rel="stylesheet" href="./styles/type-colors.css">
+    <link rel="stylesheet" href="./styles/mediaqueries.css">
     <link rel="shortcut icon" href="/assets/img/pokeball.png" type="image/x-icon">
 
     <!-- JavaScript Files -->
     <script src="./scripts/template.js"></script>
     <script src="./script.js"></script>
-
 
 </head>
 
@@ -37,12 +37,12 @@
             <img class="pokeball" src="./assets/img/pikachu.png" alt="pikachu">
         </div>
         <div>
-            <input class="search-container" type="search" placeholder="Find your Pokemon">
+            <input oninput="filterAndSearchPokemons()" id="input-search" class="search-container" type="search" placeholder="Find your Pokemon" autocomplete="off">
         </div>
     </header>
 
     <!-- main-content -->
-    <main>
+    <main onclick="bubblingPropagation(event)">
 
                 <!-- Overlay-Pokemon -->
                 <div id="pokemon-overlay" class="d_none"></div>

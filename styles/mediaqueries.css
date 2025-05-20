@@ -1,0 +1,42 @@
+@media(max-width: 740px) {
+    .header-container span {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 595px) {
+
+    header {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .header-container span {
+        font-size: 14px;
+    }
+
+    .search-container {
+        padding: 5px 8px;
+    }
+}
+
+@media(max-width: 480px) {
+
+    h1 {
+        font-size: 16px;
+    }
+
+    .main-content {
+        gap: 3px;
+        padding: 8px;
+    }
+
+    .pokemon-main-img {
+        height: auto;
+    }
+
+    .pokemon-type {
+        height: 40px;
+    }
+}
