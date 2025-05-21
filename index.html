@@ -37,20 +37,24 @@
             <img class="pokeball" src="./assets/img/pikachu.png" alt="pikachu">
         </div>
         <div>
-            <input oninput="filterAndSearchPokemons()" id="input-search" class="search-container" type="search" placeholder="Find your Pokemon" autocomplete="off">
+            <input oninput="filterAndSearchPokemons()" id="input-search" class="search-container" type="search"
+                placeholder="Find your Pokemon" autocomplete="off">
         </div>
     </header>
 
     <!-- main-content -->
     <main onclick="bubblingPropagation(event)">
 
-                <!-- Overlay-Pokemon -->
-                <div id="pokemon-overlay" class="d_none"></div>
+        <!-- Overlay-Pokemon -->
+        <div id="pokemon-overlay" class="d_none"></div>
         <!-- Pokemons Render Section -->
+        <div id="loading-spinner" class="loading-spinner">
+            <img src="./assets/img/pokeball.png" alt="Lade..." class="loading-spinner-image">
+        </div>
         <section class="main-content" id="main-content">
 
         </section>
-  
+
         <!-- Loading more Pokemons -->
         <div class="loading-button-container">
             <button onclick="loadMorePokemons()" type="button" class="btn btn-danger">Load more Pokemons</button>
@@ -67,4 +71,3 @@
 </body>
 
 </html>
-

@@ -1,5 +1,5 @@
 .pokemon-card {
-  max-width: 200px;
+  width: 150px;
   align-items: center;
   border: 2px solid black;
   margin-top: 10px;
@@ -15,7 +15,7 @@
   }
 
 .pokemon-information h1 {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
   color: white;
 }
@@ -60,8 +60,8 @@
 .pokemon-type img {
   display: flex;
   justify-content: center;
-  max-height: 60px;
-  max-width: 60px;
+  max-height: 50px;
+  max-width: 50px;
   padding: 5px;
   gap: 8px;
   margin-bottom: 8px;
@@ -71,6 +71,7 @@
 .pokemon-overlay {
   display: flex;
   justify-content: center;
+  margin: 10px;
 }
 
 .pokemon-card-overlay {
@@ -79,15 +80,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
-  margin-bottom: 16px;
+  margin: 10px;
   border-radius: 24px;
   background-color: rgb(35, 79, 135);
   color: white;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-left: 2px solid black;
-  border-right: 2px solid black;
+  border: 2px solid black;
+
 }
 
 .pokemon-img-overlay {

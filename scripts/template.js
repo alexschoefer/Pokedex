@@ -1,13 +1,10 @@
 
-    function getPokemonCardTemplate(pokemonData, index) {
-        // Diese Funktion geht durch alle Typen eines Pokémon (z. B. grass, poison) und erstellt für jeden ein <img>-Element als HTML-String. 
-        // Mit .join('') werden die einzelnen Strings zu einem einzigen zusammengefügt, der dann im Template verwendet werden kann.
+function getPokemonCardTemplate(pokemonData, index) {
+    const pokemonTypes = pokemonData[index].types.map(t => {
+        return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
+    }).join('');
 
-        const typesHTML = pokemonData[index].types.map(t => {
-            return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
-        }).join('');
-    
-        return `
+    return `
             <div class="pokemon-card">
                     <div class="pokemon-information">
                         <span>#${pokemonData[index].id}</span>
@@ -17,19 +14,19 @@
                         <img onclick="openPokemonOverlayDetails(${index})" class="pokemon-main-img" src="${pokemonData[index].sprites.other['official-artwork'].front_default}" alt="pokemon-img">
                     </div>
                     <div class="pokemon-type">
-                        ${typesHTML}
+                        ${pokemonTypes}
                     </div>
             </div>
         `;
-    }
+}
 
 
-    function getPokemonOverlayTemplate(index) {
-        const typesHTML = pokemonData[index].types.map(t => {
-            return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
-        }).join('');
+function getPokemonOverlayTemplate(index) {
+    const pokemonTypes = pokemonData[index].types.map(t => {
+        return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
+    }).join('');
 
-        return `
+    return `
             <div class="pokemon-overlay">
                 <div onclick="bubblingPropagation(event)" class="pokemon-card-overlay">
                     <div class="close-button-container">
@@ -40,19 +37,19 @@
                         <h1>${pokemonData[index].name.toUpperCase()}</h1>
                     </div>
                     <div class="${pokemonData[index].types[0].type.name} pokemon-img-overlay">
-                        <img class="navigaton-arrow" src="./assets/icons/left-arrow.png" alt="arrow-left" onclick="startPokemonNavigaton(${index-1})">
+                        <img class="navigaton-arrow" src="./assets/icons/left-arrow.png" alt="arrow-left" onclick="startPokemonNavigaton(${index - 1})">
                         <img class="pokemon-img" src="${pokemonData[index].sprites.other['official-artwork'].front_default}" alt="pokemon-img">
-                        <img class="navigaton-arrow" src="./assets/icons/right-arrow.png" alt="arrow-right" onclick="startPokemonNavigaton(${index+1})">
+                        <img class="navigaton-arrow" src="./assets/icons/right-arrow.png" alt="arrow-right" onclick="startPokemonNavigaton(${index + 1})">
                     </div>
                      <div class="pokemon-type">
-                        ${typesHTML}
+                        ${pokemonTypes}
                     </div>
                     <div class="pokemon-properties">
                         <div class="pokemon-main-facts ${pokemonData[index].types[0].type.name}">
                                 <h2>main facts</h2>
                             <div>
-                                <span>Height: ${(pokemonData[index].height/10).toFixed(1).concat(" m")}</span>
-                                <span>Weight: ${(pokemonData[index].weight/10).toFixed(1).concat(" kg")}</span>
+                                <span>Height: ${(pokemonData[index].height / 10).toFixed(1).concat(" m")}</span>
+                                <span>Weight: ${(pokemonData[index].weight / 10).toFixed(1).concat(" kg")}</span>
                                 <span>Base experience: ${pokemonData[index].base_experience}</span>
                             </div>
                         </div>
@@ -120,34 +117,34 @@
                 </div>
             </div>
         `
-    }
+}
 
-    function getEvoChainTemplate(pokemonName) {        
-        const pokemon = pokemonData.find(p => p.name == pokemonName);
-        if (pokemon) {
-            return `
+function getEvoChainTemplate(pokemonName) {
+    const pokemon = pokemonData.find(p => p.name == pokemonName);
+    if (pokemon) {
+        return `
                 <div class="evo-chain">
                     <img class="evo-chain-pokemon-img" src="${pokemon.sprites.other['official-artwork'].front_default}">
                     <div class="evo-chain-pokemon-name">${pokemon.name}</div>
                 </div>
             `;
-        }
-        return "";
     }
+    return "";
+}
 
-    function getArrowTemplate() {
-        return `
+function getArrowTemplate() {
+    return `
             <div class="evo-chain-arrow">
                 <img src="./assets/icons/right.png" alt="Evolves to" class="evo-arrow-img">
             </div>
         `;
-    }
+}
 
-    function renderFilteredPokemons(filteredList) {
-        const contentRef = document.getElementById('main-content');
-        contentRef.innerHTML = "";
-    
-        filteredList.forEach((pokemon, index) => {
-            contentRef.innerHTML += getPokemonCardTemplate(filteredList, index);
-        });
-    }
+function renderFilteredPokemons(filteredList) {
+    const contentRef = document.getElementById('main-content');
+    contentRef.innerHTML = "";
+
+    filteredList.forEach((index) => {
+        contentRef.innerHTML += getPokemonCardTemplate(filteredList, index);
+    });
+}

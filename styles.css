@@ -25,6 +25,7 @@ header {
     border-radius: 5px;
     text-align: center;
     border: 2px solid black;
+    text-align: center;
   }
 
   .pokeball {
@@ -78,6 +79,29 @@ header {
     margin-top: 10px;
     margin-left: 400px;
     cursor: pointer;
+}
+
+.loading-spinner {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.loading-spinner img {
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 

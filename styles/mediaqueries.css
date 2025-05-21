@@ -1,42 +1,117 @@
-@media(max-width: 740px) {
-    .header-container span {
-        font-size: 16px;
-    }
+@media (min-width: 1600px) {
+  .pokemon-card {
+    width: 18%;
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
 }
 
-@media(max-width: 595px) {
+@media (max-width: 595px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+  }
 
-    header {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-    }
+  .header-container {
+    flex-direction: column;
+    font-size: 18px;
+    text-align: center;
+  }
 
-    .header-container span {
-        font-size: 14px;
-    }
+  .search-container {
+    width: 90%;
+    height: 36px;
+    font-size: 16px;
+  }
 
-    .search-container {
-        padding: 5px 8px;
-    }
+  .pokeball {
+    width: 30px;
+    height: 30px;
+  }
+
+  .main-content {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .pokemon-card {
+    margin: 10px auto;
+  }
+
+  .pokemon-information h1 {
+    font-size: 16px;
+  }
+
+  .pokemon-information span {
+    font-size: 18px;
+  }
+
+  .pokemon-main-img {
+    height: auto;
+    width: 100%;
+  }
+
+  .pokemon-type img {
+    max-width: 40px;
+    max-height: 40px;
+  }
+
+  .pokemon-img-overlay {
+    border: 2px solid black;
+    width: 100%;
+  }
+
+  .pokemon-card-overlay {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .pokemon-img {
+    height: 100%;
+  }
+
+  #overlay-close-button {
+    margin-left: 0;
+    align-self: flex-end;
+  }
+
+  .pokemon-main-facts {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 16px 0;
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .footer-container .pokeball {
+    width: 30px;
+    height: 30px;
+  }
 }
 
-@media(max-width: 480px) {
 
-    h1 {
-        font-size: 16px;
-    }
-
-    .main-content {
-        gap: 3px;
-        padding: 8px;
-    }
-
-    .pokemon-main-img {
-        height: auto;
-    }
-
-    .pokemon-type {
-        height: 40px;
-    }
+@media (max-width: 370px) {
+  .evo-chain-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .evo-chain-pokemon-img {
+    height: 60px;
+    width: 100%;
+  }
 }
