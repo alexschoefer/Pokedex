@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./styles/pokemonCard.css">
     <link rel="stylesheet" href="./styles/type-colors.css">
     <link rel="stylesheet" href="./styles/mediaqueries.css">
-    <link rel="shortcut icon" href="/assets/img/pokeball.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/img/pokeball.png" type="image/x-icon">
 
     <!-- JavaScript Files -->
     <script src="./scripts/template.js"></script>
@@ -37,8 +37,7 @@
             <img class="pokeball" src="./assets/img/pikachu.png" alt="pikachu">
         </div>
         <div>
-            <input oninput="filterAndSearchPokemons()" id="input-search" class="search-container" type="search"
-                placeholder="Find your Pokemon" autocomplete="off">
+            <input oninput="filterAndSearchPokemons()" id="input-search" class="search-container" type="search" placeholder="Find your Pokemon" autocomplete="off">
         </div>
     </header>
 
@@ -47,17 +46,19 @@
 
         <!-- Overlay-Pokemon -->
         <div id="pokemon-overlay" class="d_none"></div>
-        <!-- Pokemons Render Section -->
+
+        <!-- Loading-Spinner -->
         <div id="loading-spinner" class="loading-spinner">
             <img src="./assets/img/pokeball.png" alt="Lade..." class="loading-spinner-image">
         </div>
-        <section class="main-content" id="main-content">
-
-        </section>
+        <!-- Pokemons Render Section -->
+        <section class="main-content" id="main-content"></section>
 
         <!-- Loading more Pokemons -->
         <div class="loading-button-container">
-            <button onclick="loadMorePokemons()" type="button" class="btn btn-danger">Load more Pokemons</button>
+            <button id="load-more-btn" onclick="loadMorePokemons()" type="button" class="btn btn-danger">Load more
+                Pokemons</button>
+            <button class="btn btn-danger d_none" id="btn-reset" onclick="resetSearch()">Reset result</button>
         </div>
     </main>
 
@@ -67,7 +68,8 @@
         <span>Developer Akademie Projekt - Alex Schöfer</span>
         <img class="pokeball" src="./assets/img/pikachu.png" alt="pikachu">
     </footer>
-
+    <!-- Scroll-Wrapper -->
+    <div id="scroll-wrapper" class="d_none"></div>
 </body>
 
 </html>

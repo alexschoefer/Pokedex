@@ -1,6 +1,7 @@
-@media (min-width: 1600px) {
+@media (min-width: 1000px) {
   .pokemon-card {
     width: 18%;
+    max-height: 330px;
   }
 
   body {
@@ -8,7 +9,7 @@
   }
 
   h1 {
-    font-size: 32px;
+    font-size: 18px;
   }
 }
 
@@ -47,7 +48,7 @@
   }
 
   .pokemon-information h1 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .pokemon-information span {
@@ -60,8 +61,8 @@
   }
 
   .pokemon-type img {
-    max-width: 40px;
-    max-height: 40px;
+    max-width: 30px;
+    max-height: 30px;
   }
 
   .pokemon-img-overlay {
@@ -113,5 +114,9 @@
   .evo-chain-pokemon-img {
     height: 60px;
     width: 100%;
+  }
+
+  .pokemon-card {
+   width: 100%;
   }
 }

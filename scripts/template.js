@@ -1,17 +1,13 @@
 
-function getPokemonCardTemplate(pokemonData, index) {
-    const pokemonTypes = pokemonData[index].types.map(t => {
-        return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
-    }).join('');
-
+function getPokemonCardTemplate(pokemon, pokemonTypes) {
     return `
             <div class="pokemon-card">
                     <div class="pokemon-information">
-                        <span>#${pokemonData[index].id}</span>
-                        <h1>${pokemonData[index].name.toUpperCase()}</h1>
+                        <span>#${pokemon.id}</span>
+                        <h1>${pokemon.name.toUpperCase()}</h1>
                     </div>
-                    <div class="pokemon-img-container ${pokemonData[index].types[0].type.name}">
-                        <img onclick="openPokemonOverlayDetails(${index})" class="pokemon-main-img" src="${pokemonData[index].sprites.other['official-artwork'].front_default}" alt="pokemon-img">
+                    <div class="pokemon-img-container ${pokemon.types[0].type.name}">
+                        <img onclick="openPokemonOverlayDetailsByName('${pokemon.name}')" class="pokemon-main-img" src="${pokemon.sprites.other['official-artwork'].front_default}" alt="pokemon-img">
                     </div>
                     <div class="pokemon-type">
                         ${pokemonTypes}
@@ -21,11 +17,7 @@ function getPokemonCardTemplate(pokemonData, index) {
 }
 
 
-function getPokemonOverlayTemplate(index) {
-    const pokemonTypes = pokemonData[index].types.map(t => {
-        return `<img class="${t.type.name}" src="./assets/icons/${t.type.name}.svg" alt="${t.type.name}">`;
-    }).join('');
-
+function getPokemonOverlayTemplate(pokemonTypes,index) {
     return `
             <div class="pokemon-overlay">
                 <div onclick="bubblingPropagation(event)" class="pokemon-card-overlay">
@@ -119,9 +111,7 @@ function getPokemonOverlayTemplate(index) {
         `
 }
 
-function getEvoChainTemplate(pokemonName) {
-    const pokemon = pokemonData.find(p => p.name == pokemonName);
-    if (pokemon) {
+function getEvoChainTemplate(pokemon) {
         return `
                 <div class="evo-chain">
                     <img class="evo-chain-pokemon-img" src="${pokemon.sprites.other['official-artwork'].front_default}">
@@ -129,8 +119,7 @@ function getEvoChainTemplate(pokemonName) {
                 </div>
             `;
     }
-    return "";
-}
+
 
 function getArrowTemplate() {
     return `
@@ -140,11 +129,3 @@ function getArrowTemplate() {
         `;
 }
 
-function renderFilteredPokemons(filteredList) {
-    const contentRef = document.getElementById('main-content');
-    contentRef.innerHTML = "";
-
-    filteredList.forEach((index) => {
-        contentRef.innerHTML += getPokemonCardTemplate(filteredList, index);
-    });
-}

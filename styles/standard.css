@@ -40,6 +40,8 @@
   }
 
   .no-scroll {
-    overflow: hidden;
-    height: 100vh;
+    overflow: hidden !important;
+    /* position: fixed;
+    width: 100%;
+    height: 100vh; */
 }
